@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students' Union Grant Application Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <img src="https://raw.githubusercontent.com/texusred/angliastudent/main/images/3815-ARUSU-Logo-cmyk.webp" alt="Students' Union Logo" class="logo">
+            <h1>ARU Students' Union Grant Application</h1>
+        </div>
+        
+        <!-- Desktop Tab Navigation -->
+        <div class="tabs-container desktop-only">
+            <div class="tabs-row primary-tabs">
+                <button class="tab-button active" id="guidelines-tab" onclick="openTab(event, 'guidelines')" aria-controls="guidelines">Guidelines & FAQ</button>
+                <button class="tab-button" id="main-tab" onclick="openTab(event, 'main')" aria-controls="main">Main Information</button>
+                <button class="tab-button club-only-tab" id="competition-tab" onclick="openTab(event, 'competition')" aria-controls="competition">Competition Fees & Travel</button>
+                <button class="tab-button" id="equipment-tab" onclick="openTab(event, 'equipment')" aria-controls="equipment">Equipment</button>
+                <button class="tab-button" id="advertising-tab" onclick="openTab(event, 'advertising')" aria-controls="advertising">Advertising & Promotion</button>
+                <button class="tab-button" id="cultural-tab" onclick="openTab(event, 'cultural')" aria-controls="cultural">Cultural Events</button>
+                <button class="tab-button" id="educational-tab" onclick="openTab(event, 'educational')" aria-controls="educational">Educational Events</button>
+                <button class="tab-button" id="social-tab" onclick="openTab(event, 'social')" aria-controls="social">Social & Recreational Events</button>
+            </div>
+            <div class="tabs-row secondary-tabs">
+                <button class="tab-button" id="summary-tab" onclick="openTab(event, 'summary')" aria-controls="summary">Summary</button>
+            </div>
+        </div>
+
+        <!-- Mobile Header Navigation -->
+        <div class="mobile-header mobile-only">
+            <h1 class="mobile-page-title" id="mobilePageTitle">Guidelines & FAQ</h1>
+            <button class="mobile-hamburger-btn" id="mobileHamburger" aria-label="Open navigation menu">☰</button>
+        </div>
+
+        <!-- Mobile Overlay Menu -->
+        <div class="mobile-menu-overlay hidden" id="mobileMenuOverlay">
+            <div class="mobile-menu-panel">
+                <div class="mobile-menu-header">
+                    <span>Navigation</span>
+                    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">×</button>
+                </div>
+                <div class="mobile-menu-item active" data-tab="guidelines">
+                    <span>Guidelines & FAQ</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">📍</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="main">
+                    <span>Main Information</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item club-only-menu" data-tab="competition">
+                    <span>Competition Fees & Travel</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="equipment">
+                    <span>Equipment</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="advertising">
+                    <span>Advertising & Promotion</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="cultural">
+                    <span>Cultural Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="educational">
+                    <span>Educational Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="social">
+                    <span>Social & Recreational Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-separator"></div>
+                <div class="mobile-menu-item" data-tab="summary">
+                    <span>Summary</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">📋</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content-container">
+            
+            <!-- Guidelines & FAQ Tab -->
+            <div id="guidelines" class="tab-content" style="display: block;" role="tabpanel" aria-labelledby="guidelines-tab">
+                <div class="card mb-4">
+                    <h5 class="card-header">Application Guidelines</h5>
+                    <div class="card-body">
+                        <p>Before submitting your grant application, please review the following guidelines:</p>
+                        <ul>
+                            <li>All applications must be submitted at least 4 weeks before funds are required</li>
+                            <li>Applications must include justification for all requested items</li>
+                            <li>Where possible, include links to sources for cost estimates</li>
+                            <li>Equipment purchases must be necessary for the club/society's core activities</li>
+                            <li>The Students' Union reserves the right to request additional information</li>
+                            <li>Incomplete applications will be returned without consideration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <h5 class="card-header">Frequently Asked Questions</h5>
+                    <div class="card-body">
+                        <div class="faq-item">
+                            <h6>How much funding can my club/society apply for?</h6>
+                            <p>There is no set limit, but funding is allocated based on need, justification, and available resources. Larger requests may require more detailed justification.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h6>When will I know if my application is approved?</h6>
+                            <p>Applications are typically reviewed within 2-3 weeks. You will be notified by email once a decision has been made.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h6>Can I apply for funding for past events or purchases?</h6>
+                            <p>No, funding cannot be approved retrospectively. All applications must be submitted and approved before any purchases are made.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h6>What supporting documents should I include?</h6>
+                            <p>Include quotes for equipment, venue hire agreements, event proposals, and any other relevant documentation that supports your application.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h6>Can we charge admission for funded events?</h6>
+                            <p>Yes, but any projected income must be noted in your application. Funding may be adjusted based on expected income.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h6>What happens if we don't use all the allocated funds?</h6>
+                            <p>Unused funds must be returned to the Students' Union. Contact socsfinance@angliastudent.com to arrange this.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div style="flex-grow: 1;"></div>
+                    <button type="button" class="btn next-tab" onclick="nextTab('guidelines')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Main Information Tab -->
+            <div id="main" class="tab-content" role="tabpanel" aria-labelledby="main-tab">
+                <!-- Validation message container will be added here -->
+                <div id="validationMessage" class="validation-message"></div>
+                <form id="grantApplication">
+                    <table>
+                        <tr>
+                            <td>Organisation Type:</td>
+                            <td>
+                                <select id="organisationType" required>
+                                    <option value="" selected disabled>Select type</option>
+                                    <option value="club">Club</option>
+                                    <option value="society">Society</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Club/Society Name:</td>
+                            <td><input type="text" id="organisationName" required></td>
+                        </tr>
+                        <tr>
+                            <td>Student Name:</td>
+                            <td><input type="text" id="studentName" required></td>
+                        </tr>
+                        <tr>
+                            <td>Campus:</td>
+                            <td>
+                                <select id="campus" required>
+                                    <option value="" selected disabled>Select campus</option>
+                                    <option value="Cambridge">Cambridge</option>
+                                    <option value="Chelmsford">Chelmsford</option>
+                                    <option value="London">London</option>
+                                    <option value="Writtle">Writtle</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date:</td>
+                            <td><input type="date" id="applicationDate" required></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="action-buttons">
+                        <button type="button" class="btn prev-tab" onclick="prevTab('main')">Previous</button>
+                        <button type="button" class="btn next-tab" onclick="nextTab('main')">Next</button>
+                    </div>
+                </form>
+                
+                <!-- Save/Load Progress Section - Main Tab -->
+                <div class="card mt-4">
+                    <h5 class="card-header">Save/Load Progress</h5>
+                    <div class="card-body">
+                        <p>You can save your progress and come back later to continue working on your budget.</p>
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <div class="input-group" style="max-width: 400px;">
+                                <input type="text" class="form-control" id="saveFilename" placeholder="Application name">
+                                <button type="button" class="save-btn" id="saveProgressBtn" onclick="saveProgress()">
+                                    <i class="bi bi-save"></i> Save Progress
+                                </button>
+                            </div>
+                            
+                            <select id="loadSelect" class="form-select mx-2" style="max-width: 300px;">
+                                <option value="" selected disabled>Select saved application</option>
+                            </select>
+                            
+                            <button type="button" class="load-btn" id="loadBtn" onclick="loadApplication(document.getElementById('loadSelect').value)">
+                                <i class="bi bi-folder-open"></i> Load
+                            </button>
+                            
+                            <button type="button" class="delete-btn" id="deleteBtn" onclick="deleteApplication(document.getElementById('loadSelect').value)">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </div>
+                        <small class="text-muted d-block mt-1">Progress is saved to your browser only. Clearing browser data will remove saved applications.</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Competition Fees & Travel Tab (Club Only) -->
+            <div id="competition" class="tab-content" role="tabpanel" aria-labelledby="competition-tab">
+                <table class="item-table" id="competitionTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('competitionTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('competition')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('competition')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Equipment Tab -->
+            <div id="equipment" class="tab-content" role="tabpanel" aria-labelledby="equipment-tab">
+                <table class="item-table" id="equipmentTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('equipmentTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('equipment')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('equipment')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Advertising & Promotion Tab -->
+            <div id="advertising" class="tab-content" role="tabpanel" aria-labelledby="advertising-tab">
+                <table class="item-table" id="advertisingTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('advertisingTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('advertising')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('advertising')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Cultural Events Tab -->
+            <div id="cultural" class="tab-content" role="tabpanel" aria-labelledby="cultural-tab">
+                <table class="item-table" id="culturalTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('culturalTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('cultural')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('cultural')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Educational Events Tab -->
+            <div id="educational" class="tab-content" role="tabpanel" aria-labelledby="educational-tab">
+                <table class="item-table" id="educationalTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('educationalTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('educational')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('educational')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Social & Recreational Tab -->
+            <div id="social" class="tab-content" role="tabpanel" aria-labelledby="social-tab">
+                <table class="item-table" id="socialTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required></td>
+                            <td><input type="text" class="item-source" required></td>
+                            <td><textarea class="item-justification" rows="2" required></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled>
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('socialTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('social')">Previous</button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('social')">Next</button>
+                </div>
+            </div>
+            
+            <!-- Summary Tab -->
+            <div id="summary" class="tab-content" role="tabpanel" aria-labelledby="summary-tab">
+                <div class="card mb-4">
+                    <h5 class="card-header">Application Information</h5>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td><strong>Organisation Type:</strong></td>
+                                <td id="summary-type"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Organisation Name:</strong></td>
+                                <td id="summary-name"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Student Name:</strong></td>
+                                <td id="summary-student"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Campus:</strong></td>
+                                <td id="summary-campus"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Date:</strong></td>
+                                <td id="summary-date"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <h5 class="card-header">Grant Request Summary</h5>
+                    <div class="card-body">
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th class="text-end">Amount Requested</th>
+                                </tr>
+                            </thead>
+                            <tbody id="summary-categories">
+                                <tr class="summary-competition">
+                                    <td>Competition Fees & Travel</td>
+                                    <td class="text-end" id="summary-competition-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Equipment</td>
+                                    <td class="text-end" id="summary-equipment-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Advertising & Promotion</td>
+                                    <td class="text-end" id="summary-advertising-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Cultural Events</td>
+                                    <td class="text-end" id="summary-cultural-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Educational Events</td>
+                                    <td class="text-end" id="summary-educational-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Social & Recreational Events</td>
+                                    <td class="text-end" id="summary-social-total">£0.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total-row">
+                                    <th>TOTAL AMOUNT REQUESTED</th>
+                                    <th class="text-end" id="summary-grand-total">£0.00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info">
+                    <p class="mb-0"><i class="bi bi-info-circle"></i> Please review all information before downloading. After downloading the PDF, please email it to <strong>socsfinance@angliastudent.com</strong> along with any supporting documents.</p>
+                </div>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('summary')">Previous</button>
+                    <div>
+                        <button type="button" class="export-btn" id="exportPdfBtn">
+                            <i class="bi bi-file-earmark-arrow-down"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Save/Load Progress Section - Summary Tab -->
+                <div class="card mt-4">
+                    <h5 class="card-header">Save/Load Progress</h5>
+                    <div class="card-body">
+                        <p>You can save your progress and come back later to continue working on your budget.</p>
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <div class="input-group" style="max-width: 400px;">
+                                <input type="text" class="form-control" id="saveFilename2" placeholder="Application name">
+                                <button type="button" class="save-btn" id="saveProgressBtn2" onclick="saveProgress()">
+                                    <i class="bi bi-save"></i> Save Progress
+                                </button>
+                            </div>
+                            
+                            <select id="loadSelect2" class="form-select mx-2" style="max-width: 300px;">
+                                <option value="" selected disabled>Select saved application</option>
+                            </select>
+                            
+                            <button type="button" class="load-btn" id="loadBtn2" onclick="loadApplication(document.getElementById('loadSelect2').value)">
+                                <i class="bi bi-folder-open"></i> Load
+                            </button>
+                            
+                            <button type="button" class="delete-btn" id="deleteBtn2" onclick="deleteApplication(document.getElementById('loadSelect2').value)">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                            
+                            <button type="button" class="export-btn" id="exportPdfBtn2">
+                                <i class="bi bi-file-earmark-arrow-down"></i> Download as PDF
+                            </button>
+                        </div>
+                        <small class="text-muted d-block mt-1">Progress is saved to your browser only. Clearing browser data will remove saved applications.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="mobile-bottom-nav mobile-only">
+            <button class="mobile-nav-btn mobile-prev-btn" id="mobilePrevBtn">
+                ← Previous
+            </button>
+            <button class="mobile-nav-btn mobile-next-btn" id="mobileNextBtn">
+                Next →
+            </button>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Important Notice</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your application has been downloaded as a PDF.</p>
+                    <p>Please remember to email the PDF to <strong>socsfinance@angliastudent.com</strong> along with any supporting documents.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+                                
