@@ -1106,6 +1106,12 @@ button.btn:not(.next-tab):not(.prev-tab):not([class*="-btn"]):hover {
     }
 }
 
+/* Remove borders from Application Information table only */
+.card-body table:first-of-type th,
+.card-body table:first-of-type td {
+    border: none;
+}
+
 /* ===== VISIBILITY HELPERS ===== */
 .desktop-only {
     display: block;
