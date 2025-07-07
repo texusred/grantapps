@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ARU Students' Union Grant Application Form - Apply for funding for your club or society">
+    <meta name="author" content="ARU Students' Union">
+    <title>Students' Union Grant Application Form</title>
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- Application Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <!-- Application Header -->
+        <div class="header-container">
+            <img src="https://www.angliastudent.com/pageassets/brand/sulogos/3815-ARUSU-Logo-cmyk.png" 
+                 alt="Students' Union Logo" 
+                 class="logo"
+                 onerror="this.style.display='none'">
+            <h1>ARU Students' Union Grant Application</h1>
+        </div>
+        
+        <!-- Desktop Tab Navigation -->
+        <div class="tabs-container desktop-only">
+            <div class="tabs-row primary-tabs">
+                <button class="tab-button active" 
+                        id="guidelines-tab" 
+                        onclick="openTab(event, 'guidelines')" 
+                        aria-controls="guidelines"
+                        type="button">
+                    Guidelines & FAQ
+                </button>
+                <button class="tab-button" 
+                        id="main-tab" 
+                        onclick="openTab(event, 'main')" 
+                        aria-controls="main"
+                        type="button">
+                    Main Information
+                </button>
+                <button class="tab-button club-only-tab" 
+                        id="competition-tab" 
+                        onclick="openTab(event, 'competition')" 
+                        aria-controls="competition"
+                        type="button">
+                    Competition Fees & Travel
+                </button>
+                <button class="tab-button" 
+                        id="equipment-tab" 
+                        onclick="openTab(event, 'equipment')" 
+                        aria-controls="equipment"
+                        type="button">
+                    Equipment
+                </button>
+                <button class="tab-button" 
+                        id="advertising-tab" 
+                        onclick="openTab(event, 'advertising')" 
+                        aria-controls="advertising"
+                        type="button">
+                    Advertising & Promotion
+                </button>
+                <button class="tab-button" 
+                        id="cultural-tab" 
+                        onclick="openTab(event, 'cultural')" 
+                        aria-controls="cultural"
+                        type="button">
+                    Cultural Events
+                </button>
+                <button class="tab-button" 
+                        id="educational-tab" 
+                        onclick="openTab(event, 'educational')" 
+                        aria-controls="educational"
+                        type="button">
+                    Educational Events
+                </button>
+                <button class="tab-button" 
+                        id="social-tab" 
+                        onclick="openTab(event, 'social')" 
+                        aria-controls="social"
+                        type="button">
+                    Social & Recreational Events
+                </button>
+            </div>
+            <div class="tabs-row secondary-tabs">
+                <button class="tab-button" 
+                        id="summary-tab" 
+                        onclick="openTab(event, 'summary')" 
+                        aria-controls="summary"
+                        type="button">
+                    Summary
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Header Navigation -->
+        <div class="mobile-header mobile-only">
+            <h1 class="mobile-page-title" id="mobilePageTitle">Guidelines & FAQ</h1>
+            <button class="mobile-hamburger-btn" 
+                    id="mobileHamburger" 
+                    aria-label="Open navigation menu"
+                    type="button">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Overlay Menu -->
+        <div class="mobile-menu-overlay hidden" id="mobileMenuOverlay">
+            <div class="mobile-menu-panel">
+                <div class="mobile-menu-header">
+                    <span>Navigation</span>
+                    <button class="mobile-close-btn" 
+                            id="mobileCloseBtn" 
+                            aria-label="Close navigation menu"
+                            type="button">
+                        ×
+                    </button>
+                </div>
+                <div class="mobile-menu-item active" data-tab="guidelines">
+                    <span>Guidelines & FAQ</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">📍</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="main">
+                    <span>Main Information</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item club-only-menu" data-tab="competition">
+                    <span>Competition Fees & Travel</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="equipment">
+                    <span>Equipment</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="advertising">
+                    <span>Advertising & Promotion</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="cultural">
+                    <span>Cultural Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="educational">
+                    <span>Educational Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-item" data-tab="social">
+                    <span>Social & Recreational Events</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">○</span>
+                </div>
+                <div class="mobile-menu-separator"></div>
+                <div class="mobile-menu-item" data-tab="summary">
+                    <span>Summary</span>
+                    <span class="mobile-completion-icon" aria-hidden="true">📋</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content Container -->
+        <div class="tab-content-container">
+            
+            <!-- Guidelines & FAQ Tab -->
+<!-- Guidelines & FAQ Tab -->
+<div id="guidelines" class="tab-content" style="display: block;" role="tabpanel" aria-labelledby="guidelines-tab">
+    
+    <div class="guidelines-tabs">
+        <!-- Tab Navigation -->
+        <div class="guidelines-tab-nav">
+            <button class="guidelines-tab-btn active" data-tab="timing" type="button">
+                <span class="tab-emoji">📅</span>
+                <span class="tab-label">When to Apply</span>
+            </button>
+            <button class="guidelines-tab-btn" data-tab="requirements" type="button">
+                <span class="tab-emoji">💰</span>
+                <span class="tab-label">Requirements</span>
+            </button>
+            <button class="guidelines-tab-btn" data-tab="faq" type="button">
+                <span class="tab-emoji">❓</span>
+                <span class="tab-label">FAQ</span>
+            </button>
+            <button class="guidelines-tab-btn" data-tab="process" type="button">
+                <span class="tab-emoji">👥</span>
+                <span class="tab-label">Process</span>
+            </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="guidelines-tab-content">
+            
+            <!-- When to Apply Tab -->
+            <div class="guidelines-tab-pane active" id="timing">
+                <h4>📅 When to Apply</h4>
+                
+                <div class="highlight-box">
+                    <h6>💡 Quick Rule</h6>
+                    <p><strong>Apply for the grant round that covers when you need the funding.</strong><br>
+                    Example: Event in December? → Apply during the October grant round.</p>
+                </div>
+
+                <h5>Grant Rounds for 2024-25</h5>
+                <div class="grant-rounds-grid">
+                    <div class="round-card">
+                        <div class="round-month">August</div>
+                        <div class="round-period">Sep-Oct spending</div>
+                    </div>
+                    <div class="round-card">
+                        <div class="round-month">October</div>
+                        <div class="round-period">Nov-Dec spending</div>
+                    </div>
+                    <div class="round-card">
+                        <div class="round-month">December</div>
+                        <div class="round-period">Jan-Feb spending</div>
+                    </div>
+                    <div class="round-card">
+                        <div class="round-month">February</div>
+                        <div class="round-period">Mar-Apr spending</div>
+                    </div>
+                    <div class="round-card">
+                        <div class="round-month">April</div>
+                        <div class="round-period">May-Jun spending</div>
+                    </div>
+                </div>
+
+                <h5>Key Points</h5>
+                <ul>
+                    <li><strong>Applications always open</strong> - submit anytime for next panel review</li>
+                    <li><strong>Maximum 3 applications per society per year</strong></li>
+                    <li><strong>Events 2+ months away</strong> may be rejected (discuss with coordinator first)</li>
+                    <li><strong>Funding arrives</strong> 1-2 weeks after approval</li>
+                </ul>
+            </div>
+
+            <!-- Requirements Tab -->
+            <div class="guidelines-tab-pane" id="requirements">
+                <h4>💰 Requirements</h4>
+                
+                <div class="highlight-box">
+                    <h6>⚡ Pro Tip</h6>
+                    <p>Applications with detailed justifications, accurate costs, and clear sourcing have significantly higher approval rates.</p>
+                </div>
+
+                <h5>Critical Requirements</h5>
+                <ul class="requirement-list">
+                    <li class="requirement-item">
+                        <span class="requirement-icon">🔗</span>
+                        <div class="requirement-content">
+                            <h6>Include links/sources for all costs</h6>
+                            <p>This directly affects your approval chances. Add supplier websites, quotes, or emails.</p>
+                        </div>
+                    </li>
+                    <li class="requirement-item">
+                        <span class="requirement-icon">🛒</span>
+                        <div class="requirement-content">
+                            <h6>Categorize equipment correctly</h6>
+                            <p>Single items over £100 → Equipment section. Multiple smaller items → appropriate category.</p>
+                        </div>
+                    </li>
+                    <li class="requirement-item">
+                        <span class="requirement-icon">✅</span>
+                        <div class="requirement-content">
+                            <h6>Complete all required fields</h6>
+                            <p>Incomplete applications will be returned without review.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h5>Fund Reclaim</h5>
+                <p>Unused funds are reclaimed twice per year:</p>
+                <ul>
+                    <li>End of December term/Trimester 1</li>
+                    <li>End of June 2026 (June 21st)</li>
+                </ul>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div class="guidelines-tab-pane" id="faq">
+                <h4>❓ Frequently Asked Questions</h4>
+                
+                <div class="faq-simple">
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>How much funding can we apply for?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            No set limit, but funding depends on need, justification, and your existing account balances. Larger requests need more detailed justification.
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>When will I know if it's approved?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            You'll be notified by email within 1 week of the panel meeting. Funding reaches your account 1-2 weeks after approval.
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>Can I apply for past events?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            No - all applications must be submitted and approved before purchases or events.
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>What supporting documents do I need?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            Include quotes, venue agreements, supplier links, and other relevant docs. Attach these when emailing your completed PDF.
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>Can we charge admission for funded events?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            Yes, but note any projected income in your application. Funding may be adjusted based on expected ticket sales.
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>What happens if we don't use all the allocated funds?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            Unused funds are reclaimed by the Students' Union twice per year - at the end of December term/Trimester 1, and at the end of June 2026 (June 21st).
+                        </div>
+                    </div>
+
+                    <div class="faq-simple-item">
+                        <button class="faq-simple-header" onclick="toggleGuidelinesFaq(this)" type="button">
+                            <span>My event is more than 2 months away - can I still apply?</span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="faq-simple-body" style="display: none;">
+                            Applications for events more than 2 months away may be rejected unless you have previously discussed this with your coordinator. For large events requiring deposits, contact your coordinator well in advance to discuss the best approach.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Tab -->
+            <div class="guidelines-tab-pane" id="process">
+                <h4>👥 The Process</h4>
+                
+                <h5>Who Reviews Your Application</h5>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h6>VP Activities & Opportunities</h6>
+                            <p>Ramees Nazaar</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h6>Your Coordinator</h6>
+                            <p>Assigned to your society</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h6>Student Representative</h6>
+                            <p>From October grant round onwards</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Application Steps</h5>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h6>Complete Application</h6>
+                            <p>Fill out all sections with costs and justifications</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h6>Download PDF</h6>
+                            <p>Generate your application as a PDF</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h6>Email to SU</h6>
+                            <p>Send to your campus email with supporting documents</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h6>Panel Review</h6>
+                            <p>Wait for email confirmation (within 1 week)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="action-buttons">
+        <div style="flex-grow: 1;"></div>
+        <button type="button" class="btn next-tab" onclick="nextTab('guidelines')">
+            Next <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</div>
+            
+            <!-- Main Information Tab -->
+            <div id="main" class="tab-content" role="tabpanel" aria-labelledby="main-tab">
+                <!-- Validation message container will be added here by JavaScript -->
+                <div id="validationMessage" class="validation-message"></div>
+                
+                <form id="grantApplication" novalidate>
+                    <table>
+                        <tr>
+                            <td><label for="organisationType">Organisation Type:</label></td>
+                            <td>
+                                <select id="organisationType" required aria-describedby="orgTypeHelp">
+                                    <option value="" selected disabled>Select type</option>
+                                    <option value="club">Club</option>
+                                    <option value="society">Society</option>
+                                </select>
+                                <small id="orgTypeHelp" class="form-text text-muted">Choose whether you represent a club or society</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="organisationName">Club/Society Name:</label></td>
+                            <td>
+                                <input type="text" 
+                                       id="organisationName" 
+                                       required 
+                                       maxlength="100"
+                                       aria-describedby="orgNameHelp">
+                                <small id="orgNameHelp" class="form-text text-muted">Enter the full name of your organization</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="studentName">Student Name:</label></td>
+                            <td>
+                                <input type="text" 
+                                       id="studentName" 
+                                       required 
+                                       maxlength="100"
+                                       aria-describedby="studentNameHelp">
+                                <small id="studentNameHelp" class="form-text text-muted">Enter the name of the primary contact person</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="campus">Campus:</label></td>
+                            <td>
+                                <select id="campus" required aria-describedby="campusHelp">
+                                    <option value="" selected disabled>Select campus</option>
+                                    <option value="Cambridge">Cambridge</option>
+                                    <option value="Chelmsford">Chelmsford</option>
+                                    <option value="London">London</option>
+                                    <!--<option value="Writtle">Writtle</option>-->
+                                </select>
+                                <small id="campusHelp" class="form-text text-muted">Select your primary campus location</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="applicationDate">Application Date:</label></td>
+                            <td>
+                                <input type="date" 
+                                       id="applicationDate" 
+                                       required 
+                                       aria-describedby="dateHelp">
+                                <small id="dateHelp" class="form-text text-muted">Select today's date</small>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <div class="action-buttons">
+                        <button type="button" class="btn prev-tab" onclick="prevTab('main')">
+                            <i class="bi bi-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn next-tab" onclick="nextTab('main')">
+                            Next <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Save/Load Progress Section - Main Tab -->
+                <div class="card mt-4">
+                    <h5 class="card-header">
+                        <i class="bi bi-save"></i> Save/Load Progress
+                    </h5>
+                    <div class="card-body">
+                        <p>You can save your progress and come back later to continue working on your application.</p>
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <div class="input-group" style="max-width: 400px;">
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="saveFilename" 
+                                       placeholder="Application name"
+                                       maxlength="50"
+                                       aria-label="Application save name">
+                                <button type="button" 
+                                        class="save-btn" 
+                                        id="saveProgressBtn" 
+                                        onclick="saveProgress()"
+                                        aria-label="Save current progress">
+                                    <i class="bi bi-save"></i> Save Progress
+                                </button>
+                            </div>
+                            
+                            <select id="loadSelect" 
+                                    class="form-select mx-2" 
+                                    style="max-width: 300px;"
+                                    aria-label="Select saved application to load">
+                                <option value="" selected disabled>Select saved application</option>
+                            </select>
+                            
+                            <button type="button" 
+                                    class="load-btn" 
+                                    id="loadBtn" 
+                                    onclick="loadApplication(document.getElementById('loadSelect').value)"
+                                    aria-label="Load selected application">
+                                <i class="bi bi-folder-open"></i> Load
+                            </button>
+                            
+                            <button type="button" 
+                                    class="delete-btn" 
+                                    id="deleteBtn" 
+                                    onclick="deleteApplication(document.getElementById('loadSelect').value)"
+                                    aria-label="Delete selected application">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </div>
+                        <small class="text-muted d-block mt-1">
+                            <i class="bi bi-info-circle"></i> 
+                            <strong>Progress is saved to your browser only. Clearing browser data will remove saved applications.</strong>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Competition Fees & Travel Tab (Club Only) -->
+            <div id="competition" class="tab-content" role="tabpanel" aria-labelledby="competition-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Competition & Travel Funding:</strong> This section is for competition entry fees, travel costs, and accommodation related to competitive activities.
+                </div>
+                
+                <table class="item-table" id="competitionTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('competitionTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('competition')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('competition')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Equipment Tab -->
+            <div id="equipment" class="tab-content" role="tabpanel" aria-labelledby="equipment-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Equipment Funding:</strong> Request funding for equipment essential to your club/society activities. Include supplier quotes where possible.
+                </div>
+                
+                <table class="item-table" id="equipmentTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('equipmentTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('equipment')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('equipment')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Advertising & Promotion Tab -->
+            <div id="advertising" class="tab-content" role="tabpanel" aria-labelledby="advertising-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Advertising & Promotion:</strong> Fund promotional materials, advertising costs, and marketing activities for your events or organization.
+                </div>
+                
+                <table class="item-table" id="advertisingTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('advertisingTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('advertising')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('advertising')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Cultural Events Tab -->
+            <div id="cultural" class="tab-content" role="tabpanel" aria-labelledby="cultural-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Cultural Events:</strong> Funding for cultural celebrations, heritage events, and activities that promote cultural awareness and diversity.
+                </div>
+                
+                <table class="item-table" id="culturalTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('culturalTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('cultural')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('cultural')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Educational Events Tab -->
+            <div id="educational" class="tab-content" role="tabpanel" aria-labelledby="educational-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Educational Events:</strong> Support for workshops, training sessions, guest speakers, and other educational activities that benefit your members.
+                </div>
+                
+                <table class="item-table" id="educationalTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('educationalTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('educational')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('educational')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Social & Recreational Events Tab -->
+            <div id="social" class="tab-content" role="tabpanel" aria-labelledby="social-tab">
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i>
+                    <strong>Social & Recreational Events:</strong> Funding for social gatherings, recreational activities, team building events, and community engagement activities.
+                </div>
+                
+                <table class="item-table" id="socialTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Item Name</th>
+                            <th style="width: 20%">Source/Link</th>
+                            <th style="width: 25%">Justification</th>
+                            <th style="width: 10%">Quantity</th>
+                            <th style="width: 15%">Unit Cost (£)</th>
+                            <th style="width: 5%">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="item-name" required aria-label="Item name"></td>
+                            <td><input type="text" class="item-source" required aria-label="Source or link"></td>
+                            <td><textarea class="item-justification" rows="2" required aria-label="Justification"></textarea></td>
+                            <td><input type="number" class="item-quantity" min="1" step="1" value="1" required aria-label="Quantity"></td>
+                            <td><input type="number" class="item-cost" min="0" step="0.01" required aria-label="Unit cost"></td>
+                            <td class="text-center">
+                                <button type="button" class="delete-btn remove-row" disabled aria-label="Remove this item">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">
+                                <button type="button" class="btn add-row" onclick="addItemRow('socialTable')">
+                                    <i class="bi bi-plus-circle"></i> Add Item
+                                </button>
+                            </td>
+                            <td class="text-end fw-bold">Total:</td>
+                            <td class="text-end fw-bold category-total">£0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('social')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <button type="button" class="btn next-tab" onclick="nextTab('social')">
+                        Next <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Summary Tab -->
+            <div id="summary" class="tab-content" role="tabpanel" aria-labelledby="summary-tab">
+                <div class="card mb-4">
+                    <h5 class="card-header">
+                        <i class="bi bi-person-badge"></i> Application Information
+                    </h5>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td><strong>Organisation Type:</strong></td>
+                                <td id="summary-type"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Organisation Name:</strong></td>
+                                <td id="summary-name"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Student Name:</strong></td>
+                                <td id="summary-student"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Campus:</strong></td>
+                                <td id="summary-campus"></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Date:</strong></td>
+                                <td id="summary-date"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="card mb-4">
+                    <h5 class="card-header">
+                        <i class="bi bi-calculator"></i> Grant Request Summary
+                    </h5>
+                    <div class="card-body">
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th class="text-end">Amount Requested</th>
+                                </tr>
+                            </thead>
+                            <tbody id="summary-categories">
+                                <tr class="summary-competition">
+                                    <td>Competition Fees & Travel</td>
+                                    <td class="text-end" id="summary-competition-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Equipment</td>
+                                    <td class="text-end" id="summary-equipment-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Advertising & Promotion</td>
+                                    <td class="text-end" id="summary-advertising-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Cultural Events</td>
+                                    <td class="text-end" id="summary-cultural-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Educational Events</td>
+                                    <td class="text-end" id="summary-educational-total">£0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Social & Recreational Events</td>
+                                    <td class="text-end" id="summary-social-total">£0.00</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="total-row">
+                                    <th>TOTAL AMOUNT REQUESTED</th>
+                                    <th class="text-end" id="summary-grand-total">£0.00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info">
+   <div class="mb-3">
+       <i class="bi bi-info-circle"></i> 
+       <strong>Please review all information before downloading.</strong> After downloading the PDF, please email it to the appropriate address based on your campus:
+   </div>
+   
+   <div class="campus-email-list">
+       <div class="campus-email-item">
+           <strong>Cambridge and Chelmsford:</strong><br>
+           <a href="mailto:socsfinance@angliastudent.com" class="email-link">
+               socsfinance@angliastudent.com
+           </a>
+       </div>
+       
+       <div class="campus-email-item">
+           <strong>Peterborough:</strong><br>
+           <a href="mailto:q.mao-thomas@angliastudent.com" class="email-link">
+               q.mao-thomas@angliastudent.com
+           </a>
+       </div>
+       
+       <div class="campus-email-item">
+           <strong>London:</strong><br>
+           <a href="mailto:london.societies@angliastudent.com" class="email-link">
+               london.societies@angliastudent.com
+           </a>
+       </div>
+   </div>
+   
+   <small class="text-muted mt-2 d-block">
+       <i class="bi bi-paperclip"></i> 
+       Remember to attach any supporting documents (quotes, emails, designs, etc.) to your email.
+   </small>
+</div>
+                
+                <div class="action-buttons">
+                    <button type="button" class="btn prev-tab" onclick="prevTab('summary')">
+                        <i class="bi bi-arrow-left"></i> Previous
+                    </button>
+                    <div>
+                        <button type="button" class="export-btn" id="exportPdfBtn">
+                            <i class="bi bi-file-earmark-arrow-down"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Save/Load Progress Section - Summary Tab -->
+                <div class="card mt-4">
+                    <h5 class="card-header">
+                        <i class="bi bi-save"></i> Save/Load Progress
+                    </h5>
+                    <div class="card-body">
+                        <p>You can save your progress and come back later to continue working on your application.</p>
+                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                            <div class="input-group" style="max-width: 400px;">
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="saveFilename2" 
+                                       placeholder="Application name"
+                                       maxlength="50"
+                                       aria-label="Application save name">
+                                <button type="button" 
+                                        class="save-btn" 
+                                        id="saveProgressBtn2" 
+                                        onclick="saveProgress()"
+                                        aria-label="Save current progress">
+                                    <i class="bi bi-save"></i> Save Progress
+                                </button>
+                            </div>
+                            
+                            <select id="loadSelect2" 
+                                    class="form-select mx-2" 
+                                    style="max-width: 300px;"
+                                    aria-label="Select saved application to load">
+                                <option value="" selected disabled>Select saved application</option>
+                            </select>
+                            
+                            <button type="button" 
+                                    class="load-btn" 
+                                    id="loadBtn2" 
+                                    onclick="loadApplication(document.getElementById('loadSelect2').value)"
+                                    aria-label="Load selected application">
+                                <i class="bi bi-folder-open"></i> Load
+                            </button>
+                            
+                            <button type="button" 
+                                    class="delete-btn" 
+                                    id="deleteBtn2" 
+                                    onclick="deleteApplication(document.getElementById('loadSelect2').value)"
+                                    aria-label="Delete selected application">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </div>
+                        <small class="text-muted d-block mt-1">
+                            <i class="bi bi-info-circle"></i> 
+                            Progress is saved to your browser only. Clearing browser data will remove saved applications.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="mobile-bottom-nav mobile-only">
+            <button class="mobile-nav-btn mobile-prev-btn" id="mobilePrevBtn">
+                <i class="bi bi-arrow-left"></i> Previous
+            </button>
+            <button class="mobile-nav-btn mobile-next-btn" id="mobileNextBtn">
+                Next <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Warning Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-hidden="true" aria-labelledby="warningModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="warningModalLabel">
+                        <i class="bi bi-check-circle-fill text-success"></i> PDF Downloaded Successfully
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Your application has been downloaded as a PDF.</p>
+                    <p>
+                        <strong>Next step:</strong> Please email the PDF to: 
+                        <a href="mailto:socsfinance@angliastudent.com" class="text-decoration-none">
+                            <strong>socsfinance@angliastudent.com</strong><p>Cambridge/Chelmsford</p>
+                        </a>
+                        <p>or</p>
+                        <a href="mailto:q.mao-thomas@angliastudent.com" class="text-decoration-none">
+                            <strong>Peterborough Societies - q.mao-thomas@angliastudent.com</strong>
+                        </a>
+                        <p>or</p>
+                        <a href="mailto:london.societies@angliastudent.com" class="text-decoration-none">
+                            <strong>London Societies - london.societies@angliastudent.com</strong>
+                        </a> 
+                        along with any supporting documents.
+                    </p>
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <strong>Important:</strong> Your application is not complete until it is emailed to the Students' Union.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <i class="bi bi-check"></i> Understood
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification" id="notification" role="alert" aria-live="polite"></div>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    
+    <!-- Application JavaScript -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pdf-export.js"></script>
+</body>
+</html>
