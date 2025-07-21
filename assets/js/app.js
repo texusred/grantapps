@@ -586,10 +586,10 @@ function addItemRow(tableId) {
         if (quantityInput) quantityInput.addEventListener('input', debouncedUpdate);
         
         // Focus on the first input of the new row
-        const firstInput = newRow.querySelector('.item-name');
-        if (firstInput) {
-            firstInput.focus();
-        }
+       // const firstInput = newRow.querySelector('.item-name');
+       // if (firstInput) {
+       //     firstInput.focus();
+      //  }
         
     } catch (error) {
         console.error('Error adding item row:', error);
